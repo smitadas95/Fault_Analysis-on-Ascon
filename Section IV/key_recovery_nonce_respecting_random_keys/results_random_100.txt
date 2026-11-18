@@ -1,0 +1,74 @@
+Primitive checks: S-box truth table, five inverse linear maps, and 3 Ascon-128 v1.2 KATs PASS
+Category 2 software fault-injection: Ascon-128 v1.2 custom-tag verification
+Fault sequence: SET(0), SET(1), SET(2), SET(3), SET(4)
+S-box coordinate convention: y4 is MSB, y0 is LSB
+Trials: 100
+Model: integrated decrypt/verify target; SET faults at final-round S-box
+Three modified-tag queries per fault position and S-box column
+Modified tag differences: (0,1), (1,0), (1,1); original (0,0) omitted
+
+==================================================
+Tag placement (4,3)
+==================================================
+Ordered IF lookup conflicts: 0
+Ordered EF lookup conflicts: 0
+Ordered IF: SUFFICIENT for recovering the selected S-box output bits
+Ordered EF: SUFFICIENT for recovering the selected S-box output bits
+  Clean-tag acceptance and wrong-tag rejection: PASS
+  Modified-tag verification queries: 960 (3 x 5 x 64)
+  Ordered IF recovered K0: e693eeaf69822183
+  Ordered IF recovered K1: 441d47244169c906
+  Ordered IF key recovery: SUCCESS (unmapped=0)
+  Ordered EF recovered K0: e693eeaf69822183
+  Ordered EF recovered K1: 441d47244169c906
+  Ordered EF key recovery: SUCCESS (unmapped=0)
+  Actual key K0/K1 (harness only): e693eeaf69822183 441d47244169c906
+
+Summary over 100 independent keys/inputs:
+  Ordered IF: 100/100 complete 128-bit keys recovered
+  Ordered EF: 100/100 complete 128-bit keys recovered
+  Modified-tag decryption queries per transcript: 960
+
+==================================================
+Tag placement (4,0)
+==================================================
+Ordered IF lookup conflicts: 0
+Ordered EF lookup conflicts: 0
+Ordered IF: SUFFICIENT for recovering the selected S-box output bits
+Ordered EF: SUFFICIENT for recovering the selected S-box output bits
+  Clean-tag acceptance and wrong-tag rejection: PASS
+  Modified-tag verification queries: 960 (3 x 5 x 64)
+  Ordered IF recovered K0: 44635a0e75b5ecf8
+  Ordered IF recovered K1: 18bc39f29268b330
+  Ordered IF key recovery: SUCCESS (unmapped=0)
+  Ordered EF recovered K0: 44635a0e75b5ecf8
+  Ordered EF recovered K1: 18bc39f29268b330
+  Ordered EF key recovery: SUCCESS (unmapped=0)
+  Actual key K0/K1 (harness only): 44635a0e75b5ecf8 18bc39f29268b330
+
+Summary over 100 independent keys/inputs:
+  Ordered IF: 100/100 complete 128-bit keys recovered
+  Ordered EF: 100/100 complete 128-bit keys recovered
+  Modified-tag decryption queries per transcript: 960
+
+==================================================
+Tag placement (3,2)
+==================================================
+Ordered IF lookup conflicts: 0
+Ordered EF lookup conflicts: 0
+Ordered IF: SUFFICIENT for recovering the selected S-box output bits
+Ordered EF: SUFFICIENT for recovering the selected S-box output bits
+  Clean-tag acceptance and wrong-tag rejection: PASS
+  Modified-tag verification queries: 960 (3 x 5 x 64)
+  Ordered IF recovered K0: 2f9a231b70890f1e
+  Ordered IF recovered K1: ea37e7e8431675bb
+  Ordered IF key recovery: SUCCESS (unmapped=0)
+  Ordered EF recovered K0: 2f9a231b70890f1e
+  Ordered EF recovered K1: ea37e7e8431675bb
+  Ordered EF key recovery: SUCCESS (unmapped=0)
+  Actual key K0/K1 (harness only): 2f9a231b70890f1e ea37e7e8431675bb
+
+Summary over 100 independent keys/inputs:
+  Ordered IF: 100/100 complete 128-bit keys recovered
+  Ordered EF: 100/100 complete 128-bit keys recovered
+  Modified-tag decryption queries per transcript: 960
